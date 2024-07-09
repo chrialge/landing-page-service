@@ -17,7 +17,7 @@ body {
 
 .container {
     width: 100%;
-    padding: 0 10px;
+    padding: 0 5px;
 }
 
 #jumbotron {
@@ -119,6 +119,8 @@ body {
 
 
 #category {
+    padding-bottom: 30px;
+
     .container_category {
 
         &>h3 {
@@ -128,11 +130,80 @@ body {
         &>.btn_primary {
             margin-bottom: 20px;
         }
+
+        .categories_container {
+            display: flex;
+            row-gap: 10px;
+            flex-wrap: wrap;
+
+            &>* {
+                width: 100%;
+                display: flex;
+                padding: 20px;
+                background-color: rgba(255, 0, 0, 0.545);
+                align-items: center;
+                gap: 20px;
+
+                &>.category_icon {
+                    color: red;
+                    font-size: 30px;
+                }
+            }
+        }
     }
 }
 
 
+#course {
 
+    .container {
+
+        &>h5 {
+            padding: 15px 0;
+        }
+
+        &>h2 {
+            padding-bottom: 50px;
+        }
+    }
+
+    .container_course {
+        display: flex;
+        row-gap: 30px;
+        flex-wrap: wrap;
+
+        .card_course {
+            padding: 10px;
+            width: 100%;
+            background-color: white;
+            border: 0;
+            border-radius: 10px;
+            box-shadow: 1px 1px 10px gray;
+
+            .card_top {
+                height: 200px;
+            }
+
+            .card_body {
+                .text_subtitle {
+                    padding: 10px 0;
+                    display: flex;
+                    justify-content: space-between;
+                }
+
+                .title {
+                    padding: 20px 0;
+                }
+            }
+        }
+    }
+
+    .btn_all_course {
+        padding: 50px 0;
+        display: flex;
+        justify-content: center;
+    }
+}
 
 
 
@@ -143,4 +214,200 @@ body {
     border-radius: 24px;
     background-color: red;
     color: white;
+}
+
+.text_center {
+    text-align: center;
+}
+
+
+
+#feedback {
+    background-color: aqua;
+    padding: 60px 0;
+
+    .container {
+
+        &>h2 {
+            padding: 15px 0 50px;
+        }
+
+        .user_feedback {
+            display: flex;
+            padding: 20px 0;
+            align-items: center;
+
+            .user_img {
+                width: 50px;
+
+                &>img {
+                    width: 100%;
+                }
+            }
+
+            .user_info {
+                padding-left: 50px;
+                flex-grow: 1;
+
+                &>span {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+#professor {
+    padding: 40px 0;
+
+    .container {
+        &>h2 {
+            padding: 15px 30px;
+        }
+
+        .container_professor {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+
+            .card_professor {
+                width: calc((100% /12)* 3 - 8px);
+                background-color: white;
+                border-radius: 8px;
+                box-shadow: 1px 1px 10px black;
+
+                &>img {
+                    width: 100%;
+                }
+            }
+
+            .card_important {
+                width: 100%;
+            }
+        }
+    }
+}
+
+#value_adder {
+    padding: 30px 0;
+
+    .container {
+
+        &>h2 {
+            padding: 15px 0 30px;
+        }
+
+        &>ul {
+            padding-left: 15px;
+            padding-bottom: 20px;
+            list-style: outside url('../../../public/circle-check-solid.svg');
+
+            &>li {
+                padding: 8px 0;
+                vertical-align: top;
+                padding-left: 6px;
+
+            }
+
+        }
+    }
+}
+
+#accordion {
+    padding: 30px 0 0;
+
+    .container {
+        margin-left: 20px;
+        border-left: 1px solid black;
+
+        .card {
+            padding-bottom: 30px;
+
+            .icon {
+                left: 0px;
+                padding: 10px;
+                aspect-ratio: 1;
+                font-size: 18px;
+                background-color: white;
+                position: absolute;
+                border-radius: 50%;
+            }
+
+            .accordion_item {
+                margin: 0 30px 0 30px;
+
+                .accordion_title {
+                    position: relative;
+                    padding: 10px;
+                    background-color: aqua;
+
+                    &:before {
+                        position: absolute;
+                        right: 98%;
+                        content: '';
+                        width: 0px;
+                        height: 0px;
+                        border-style: solid;
+                        border-width: 10px 10px 10px 0;
+                        border-color: transparent aqua transparent transparent;
+                        display: inline-block;
+                        vertical-align: middle;
+                        margin-right: 5px;
+                    }
+                }
+
+                .accordion_paragraph {
+                    background-color: white;
+                    padding: 10px 20px;
+                    border-bottom-left-radius: 7px;
+                    border-bottom-right-radius: 7px;
+                    box-shadow: 0 3px gray;
+
+
+
+                    .btn_primary {
+                        margin-top: 20px;
+                        padding: 7px 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#newsletter {
+    padding: 20px 0;
+
+    .container {
+        background-color: aqua;
+        padding: 50px 0;
+
+        &>h5 {
+            padding: 10px 0;
+        }
+
+        &>form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+
+            &>input[type="email"] {
+                width: 95%;
+                padding: 15px;
+                border-radius: 20px;
+                border: 0;
+                background-color: white;
+                outline: none;
+
+                &::placeholder {
+                    text-align: center;
+                }
+            }
+
+            &>.btn_primary {
+                width: 95%;
+            }
+        }
+    }
 }
