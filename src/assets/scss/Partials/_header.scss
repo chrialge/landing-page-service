@@ -1,0 +1,44 @@
+#site_header {
+    background-color: white;
+    padding: 10px 0;
+
+    .sidebar {
+        display: flex;
+        flex-wrap: wrap;
+
+        row-gap: 10px;
+
+        &>* {
+            width: 50%;
+        }
+
+        .link-header {
+
+            &>ul {
+                display: flex;
+                list-style: none;
+                gap: 10px;
+
+                &>li>a {
+                    color: black;
+                    text-decoration: none;
+                }
+            }
+        }
+
+        .icons-header {
+            &>ul {
+                display: flex;
+                list-style: none;
+                gap: 10px;
+
+                &>li>a {
+                    color: black;
+                    text-decoration: none;
+                }
+            }
+        }
+
+    }
+
+}

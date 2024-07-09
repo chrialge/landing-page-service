@@ -1,3 +1,7 @@
+@use './Partials/header.scss';
+@use './Partials/footer.scss';
+
+
 * {
     padding: 0;
     margin: 0;
@@ -7,28 +11,136 @@
 
 body {
     background-color: green;
-
-
-    #site_header {
-        background-color: white;
-
-        .sidebar {
-            display: flex;
-            flex-wrap: wrap;
-
-            &>* {
-                width: 50%;
-            }
-
-            
-        }
-
-    }
 }
 
 
 
 .container {
     width: 100%;
-    padding: 10px;
+    padding: 0 10px;
+}
+
+#jumbotron {
+    height: 500px;
+
+    .jumbo_container {
+        padding-top: 50px;
+        padding-right: 30px;
+
+        &>h2 {
+            font-size: 50px;
+            padding-bottom: 15px;
+        }
+
+        .search_container {
+            margin-top: 30px;
+            background-color: white;
+            border-radius: 7px;
+            padding: 7px;
+            display: flex;
+
+            &>input {
+                flex-grow: 1;
+                border: none;
+                background-color: white;
+                outline: none;
+            }
+
+            .search_btn {
+                border: none;
+                padding: 8px 12px;
+                color: white;
+                background-color: green;
+                border-radius: 10px;
+            }
+        }
+    }
+}
+
+#banner_data {
+    .container_data {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 10px;
+
+        .banner_single {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 0;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 1px 1px 10px;
+        }
+    }
+}
+
+#who_are {
+    padding: 30px 0;
+
+    .container_who_are {
+        display: flex;
+        flex-wrap: wrap;
+
+        &>* {
+            width: 100%;
+        }
+
+        .who_are_image {
+            height: 400px;
+        }
+
+        .who_are_info {
+            &>h2 {
+                padding: 15px 0;
+            }
+
+            &>ul {
+                padding-left: 15px;
+                padding-bottom: 20px;
+                list-style: outside url('../../../public/circle-check-solid.svg');
+
+                &>li {
+                    padding: 8px 0;
+                    vertical-align: top;
+                    padding-left: 10px;
+
+                }
+
+            }
+
+
+
+        }
+    }
+}
+
+
+#category {
+    .container_category {
+
+        &>h3 {
+            padding: 15px 0;
+        }
+
+        &>.btn_primary {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+
+
+
+
+
+
+.btn_primary {
+    padding: 15px 40px;
+    border: 0;
+    border-radius: 24px;
+    background-color: red;
+    color: white;
 }
