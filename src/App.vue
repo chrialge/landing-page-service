@@ -21,13 +21,25 @@ export default {
   },
   data() {
     return {
-
+      socialProfessor: false,
+      index: 0,
     }
   },
   setup() {
     return {
       modules: [Pagination, Navigation],
     };
+  },
+  methods: {
+    mouseUp(n) {
+      this.index = n;
+      this.socialProfessor = true
+      console.log(this.socialProfessor)
+    },
+    mouseDown() {
+      this.socialProfessor = false
+      console.log(this.socialProfessor)
+    }
   },
   mounted() {
 
@@ -100,7 +112,7 @@ export default {
           <img src="/images/about-img.jpg" alt="">
         </div>
         <div class="who_are_info">
-          <span>Scopri di piu su di noi</span>
+          <h5 class="color_subtitle">Scopri di piu su di noi</h5>
           <h2>Chi Siamo</h2>
           <p>
             Benvenuti nel nostro magico mondo dove potresti trovare la tua strada! Offriamo corsi di circense,
@@ -133,7 +145,7 @@ export default {
       <div class="container container_category">
         <div class="category_header">
           <div class="category_text">
-            <span>Scegli la categoria di corsi dalla quale vuoi iniziare</span>
+            <h5 class="color_subtitle">Scegli la categoria di corsi dalla quale vuoi iniziare</h5>
             <h2>Categorie Popolari</h2>
           </div>
 
@@ -161,7 +173,7 @@ export default {
 
     <section id="course">
       <div class="container">
-        <h5 class="text_center">Alcuni dei nostri corsi online piu popolari</h5>
+        <h5 class="text_center color_subtitle">Alcuni dei nostri corsi online piu popolari</h5>
         <h2 class="text_center">Esplora I Corsi Online</h2>
         <div class="container_course">
           <div class="card_course" v-for="n in 8">
@@ -169,7 +181,7 @@ export default {
 
             </div>
             <div class="card_body">
-              <div class="text_subtitle">
+              <div class="text_subtitle text_gray">
                 <span>PAGLIACCIO</span>
                 <span>
                   <i class="fa-regular fa-clock"></i>
@@ -202,7 +214,7 @@ export default {
 
     <section id="feedback">
       <div class="container">
-        <h5 class="text_center">Cosa dicono gli studenti</h5>
+        <h5 class="text_center color_subtitle">Cosa dicono gli studenti</h5>
         <h2 class="text_center">Recensioni</h2>
         <swiper :spaceBetween="30" :navigation="true" :pagination="{
           clickable: true,
@@ -232,14 +244,43 @@ export default {
 
     <section id="professor">
       <div class="container">
-        <h5 class="text_center">Stalkera i nostri insegnanti</h5>
+        <h5 class="text_center color_subtitle">Stalkera i nostri insegnanti</h5>
         <h2 class="text_center">I Nostri Insegnanti</h2>
         <div class="container_professor">
-          <div class="card_professor" :class="[n == 5 ? 'card_important' : '']" v-for="n in 5">
-            <img src="/recognitions.png" alt="">
+          <div class="card_professor" :class="[n == 5 ? 'card_important' : '']" v-for="n in 5" @mouseenter="mouseUp(n)"
+            @mouseleave="mouseDown()">
+            <div class="card_img">
+              <img src="/recognitions.png" alt="">
+              <div class="social_professor" v-show="this.socialProfessor && n == index">
+                <ul>
+                  <li>
+                    <a href="#">
+                      <i class="fa-brands fa-facebook"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa-brands fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa-brands fa-instagram"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                  </li>
+                </ul>
+
+              </div>
+            </div>
+
             <div class="card_body">
               <h4 class="card_title text_center">Francesco battista</h4>
-              <p class="card_role text_center">Giocolliere</p>
+              <p class="card_role text_center color_subtitle">Giocolliere</p>
             </div>
           </div>
         </div>
@@ -248,7 +289,7 @@ export default {
 
     <section id="value_adder">
       <div class="container">
-        <h5 class="text_center">Valori Aggiunti</h5>
+        <h5 class="text_center color_subtitle">Valori Aggiunti</h5>
         <h2 class="text_center">I Nostri Corsi Piacciono Perche...</h2>
         <ul>
           <li>Ridendo, l'apprendimento dell'arte del circo diventa un'esperienza divertente e piacevole</li>
@@ -292,7 +333,7 @@ export default {
       <div class="container">
         <div class="text_mewsletter">
           <h2>Iscriviti E Ottieni Il 20% Di Sconto Sul Tuo Primo Corso Online</h2>
-          <h5>Iscriviti alla nostra newsletter e non perderti mai nessuna offerta</h5>
+          <h5 class="color_subtitle">Iscriviti alla nostra newsletter e non perderti mai nessuna offerta</h5>
         </div>
 
         <form action="" method="post">

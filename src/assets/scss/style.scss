@@ -1,6 +1,14 @@
 @use './Partials/header.scss';
 @use './Partials/footer.scss';
 
+$bg-primary: #EC6C5B;
+$bg-btn: #4CC083;
+$bg-feedback: #E2f3f0;
+$bg-lighter: #ffffff;
+$bg-mail: #fcebd0;
+$text-gray: gray;
+$text-lighter: #FFFFFF;
+$text-subtitle: #EC6C5B;
 
 * {
     padding: 0;
@@ -10,10 +18,19 @@
 
 
 body {
-    background-color: green;
+    background-color: $bg-lighter;
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
 }
 
-
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 600;
+}
 
 .container {
     width: 100%;
@@ -53,7 +70,7 @@ body {
 
             .search_container {
                 margin-top: 30px;
-                background-color: white;
+                background-color: $bg-lighter;
                 border-radius: 7px;
                 padding: 7px;
                 display: flex;
@@ -61,16 +78,21 @@ body {
                 &>input {
                     flex-grow: 1;
                     border: none;
-                    background-color: white;
+                    background-color: $bg-lighter;
                     outline: none;
                 }
 
                 .search_btn {
+                    cursor: pointer;
                     border: none;
                     padding: 8px 12px;
-                    color: white;
-                    background-color: green;
+                    color: $text-lighter;
+                    background-color: $bg-btn;
                     border-radius: 10px;
+
+                    &:hover {
+                        filter: brightness(0.8);
+                    }
                 }
             }
 
@@ -107,9 +129,24 @@ body {
             justify-content: center;
             align-items: center;
             padding: 50px 0;
-            background-color: white;
+            background-color: $bg-lighter;
             border-radius: 10px;
             box-shadow: 1px 1px 10px;
+
+            &>h4 {
+                font-size: 30px;
+                color: $text-subtitle;
+            }
+
+            &:hover {
+                background-color: $bg-btn;
+                color: $text-lighter;
+            }
+
+            &:hover h4 {
+
+                color: $text-lighter;
+            }
 
             @media (min-width:600px) {
                 transform: translatey(-120px);
@@ -185,8 +222,8 @@ body {
 
         .category_header {
 
-            &>h2 {
-                padding: 15px 0;
+            .category_text>h2 {
+                padding: 15px 0 30px;
             }
 
             &>.btn_primary {
@@ -196,6 +233,7 @@ body {
             @media (min-width: 800px) {
                 display: flex;
                 justify-content: space-between;
+                align-items: center;
             }
         }
 
@@ -206,6 +244,7 @@ body {
             row-gap: 10px;
             flex-wrap: wrap;
             justify-content: space-between;
+
 
             &>* {
                 width: 100%;
@@ -228,6 +267,17 @@ body {
 
                 @media (min-width:800px) {
                     width: calc(100% / 12 * 4 - 5px);
+                }
+
+                &:hover {
+                    background-color: red;
+                    color: $text-lighter;
+                }
+
+
+                &:hover .category_icon {
+
+                    color: $text-lighter;
                 }
             }
         }
@@ -295,15 +345,25 @@ body {
     }
 }
 
+.color_subtitle {
+    color: $text-subtitle;
+}
 
-
+.text_gray {
+    color: $text-gray;
+}
 
 .btn_primary {
+    cursor: pointer;
     padding: 15px 40px;
     border: 0;
     border-radius: 24px;
-    background-color: red;
+    background-color: $bg-btn;
     color: white;
+
+    &:hover {
+        filter: brightness(0.8);
+    }
 }
 
 .text_center {
@@ -313,8 +373,9 @@ body {
 
 
 #feedback {
-    background-color: aqua;
+    background-color: $bg-feedback;
     padding: 60px 0;
+    overflow-x: hidden;
 
     .container {
 
@@ -388,14 +449,46 @@ body {
             gap: 10px;
 
             .card_professor {
+                padding: 10px;
                 width: calc((100% /12)* 3 - 8px);
                 background-color: white;
                 border-radius: 8px;
                 box-shadow: 1px 1px 10px black;
 
-                &>img {
+                .card_img {
                     width: 100%;
+                    position: relative;
+                    border-radius: 10px;
+
+                    &>img {
+                        width: 100%;
+                    }
+
+                    .social_professor {
+                        position: absolute;
+                        top: 12px;
+                        left: 2px;
+
+                        &>ul {
+                            list-style: none;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            gap: 10px;
+
+                            &>li>a {
+                                width: 100%;
+                                padding: 10px;
+                                color: $text-lighter;
+                                background-color: $bg-btn;
+                            }
+                        }
+                    }
                 }
+
+
+
+
 
                 @media (min-width:800px) {
                     width: calc(100% / 5 - 10px);
@@ -452,10 +545,18 @@ body {
     padding: 30px 0 0;
 
     .container {
+        width: 50%;
         margin-left: 20px;
-        border-left: 1px solid black;
+        border-left: 2px solid $text-subtitle;
+
+
+        @media (min-width:800px) {
+            width: 50%;
+
+        }
 
         .card {
+            width: 100%;
             padding-bottom: 30px;
 
             .icon {
@@ -463,24 +564,26 @@ body {
                 padding: 10px;
                 aspect-ratio: 1;
                 font-size: 18px;
-                background-color: white;
+                background-color: $bg-primary;
+                color: $text-lighter;
                 position: absolute;
                 border-radius: 50%;
 
                 @media (min-width:800px) {
-                    left: 48%;
+                    left: 48.9%;
 
                 }
             }
 
             .accordion_item {
                 margin: 0 30px 0 30px;
-                width: calc(100% - 50px);
+                width: calc(100% - 60px);
+                // width: calc(100% - 50px);
 
                 .accordion_title {
                     position: relative;
                     padding: 10px;
-                    background-color: aqua;
+                    background-color: $bg-primary;
 
                     &:before {
                         position: absolute;
@@ -490,7 +593,7 @@ body {
                         height: 0px;
                         border-style: solid;
                         border-width: 10px 15px 10px 0;
-                        border-color: transparent aqua transparent transparent;
+                        border-color: transparent $text-subtitle transparent transparent;
                         display: inline-block;
                         vertical-align: middle;
                         margin-right: 5px;
@@ -512,11 +615,9 @@ body {
                     }
                 }
 
-                @media (min-width:800px) {
-                    width: 50%;
-
-                }
             }
+
+
         }
 
         .left_card {
@@ -525,7 +626,7 @@ body {
             .accordion_left_title {
                 position: relative;
                 padding: 10px;
-                background-color: aqua;
+                background-color: $bg-primary;
 
                 &:before {
                     position: absolute;
@@ -536,7 +637,7 @@ body {
                     border-style: solid;
                     transform: rotate(56deg);
                     border-width: 10px 15px 10px 0;
-                    border-color: transparent aqua transparent transparent;
+                    border-color: transparent $text-subtitle transparent transparent;
                     display: inline-block;
                     vertical-align: middle;
                     margin-right: 5px;
@@ -546,7 +647,7 @@ body {
             .accordion_phone {
                 position: relative;
                 padding: 10px;
-                background-color: aqua;
+                background-color: $bg-primary;
 
                 @media (max-width:800px) {
 
@@ -559,7 +660,7 @@ body {
                         height: 0px;
                         border-style: solid;
                         border-width: 10px 15px 10px 0;
-                        border-color: transparent aqua transparent transparent;
+                        border-color: transparent $bg-primary transparent transparent;
                         display: inline-block;
                         vertical-align: middle;
                         margin-right: 5px;
@@ -575,7 +676,7 @@ body {
             }
 
             @media (min-width:1000px) {
-                transform: translateX(-113%);
+                transform: translateX(-110%);
 
             }
 
@@ -590,13 +691,13 @@ body {
 
 #newsletter {
     margin: 20px 0;
-    background-color: aqua;
+    background-color: $bg-mail;
 
     .container {
 
         padding: 50px 0;
 
-        &>h5 {
+        .text_mewsletter>h5 {
             padding: 10px 0;
         }
 

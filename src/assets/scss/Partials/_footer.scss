@@ -1,5 +1,5 @@
 #site_footer {
-    background-color: gray;
+    background-color: white;
 
     .footer_top {
         padding-bottom: 70px;
@@ -17,12 +17,21 @@
                     width: calc(100% / 5);
                 }
 
-                &>ul>li {
+                &>ul {
                     list-style: none;
+                    padding-top: 10px;
 
-                    &>a {
-                        text-decoration: none;
-                        color: black;
+                    &>li {
+                        line-height: 22px;
+
+                        &>a {
+                            text-decoration: none;
+                            color: black;
+
+                            &:hover {
+                                color: #EC6C5B;
+                            }
+                        }
                     }
                 }
 
@@ -36,7 +45,11 @@
 
                     &>li>a {
                         text-decoration: none;
-                        color: black;
+                        color: gray;
+
+                        &:hover {
+                            color: #EC6C5B
+                        }
                     }
                 }
 
@@ -53,6 +66,6 @@
 
     .footer_bottom {
         padding: 15px 0;
-        border-top: 1px solid red;
+        border-top: 1px solid gray;
     }
 }

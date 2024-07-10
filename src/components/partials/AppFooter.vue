@@ -16,7 +16,7 @@ export default {
             <div class="container">
                 <div class="social">
                     <div class="logo">
-                        lorem
+                        <img src="../../../public/images/logo.png" alt="">
                     </div>
                     <div class="widget_social">
                         <ul>

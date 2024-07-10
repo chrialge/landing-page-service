@@ -24,7 +24,7 @@ export default {
     <header id="site_header">
         <nav class="container sidebar">
             <div class="logo">
-                <h4>ciao</h4>
+                <img src="../../../public/images/logo.png" alt="">
             </div>
             <div class="btn_dropdown" @click="this.dropdown = !this.dropdown" v-show="this.dropdownActive">
                 <button>
