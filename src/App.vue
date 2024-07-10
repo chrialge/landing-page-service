@@ -9,7 +9,8 @@ import 'swiper/css';
 
 
 import 'swiper/css/pagination';
-import { Pagination } from 'swiper/modules';
+import 'swiper/css/navigation';
+import { Pagination, Navigation } from 'swiper/modules';
 
 export default {
   components: {
@@ -25,7 +26,7 @@ export default {
   },
   setup() {
     return {
-      modules: [Pagination],
+      modules: [Pagination, Navigation],
     };
   },
   mounted() {
@@ -203,7 +204,7 @@ export default {
       <div class="container">
         <h5 class="text_center">Cosa dicono gli studenti</h5>
         <h2 class="text_center">Recensioni</h2>
-        <swiper :spaceBetween="30" :pagination="{
+        <swiper :spaceBetween="30" :navigation="true" :pagination="{
           clickable: true,
         }" :modules="modules" class="mySwiper">
           <swiper-slide v-for="n in 3">
