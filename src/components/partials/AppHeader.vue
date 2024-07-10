@@ -24,7 +24,8 @@ export default {
     <header id="site_header">
         <nav class="container sidebar">
             <div class="logo">
-                <img src="../../../public/images/logo.png" alt="">
+                <img src="../../../public/images/logo.jpg" alt="" width="50px">
+                <h1 class="color_subtitle">Joker school</h1>
             </div>
             <div class="btn_dropdown" @click="this.dropdown = !this.dropdown" v-show="this.dropdownActive">
                 <button>

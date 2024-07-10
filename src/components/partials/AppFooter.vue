@@ -16,7 +16,8 @@ export default {
             <div class="container">
                 <div class="social">
                     <div class="logo">
-                        <img src="../../../public/images/logo.png" alt="">
+                        <img src="../../../public/images/logo.jpg" alt="" width="50px">
+                        <h3 class="color_subtitle">Joker school</h3>
                     </div>
                     <div class="widget_social">
                         <ul>

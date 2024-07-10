@@ -53,10 +53,12 @@ export default {
   <AppHeader />
 
   <main id="site_main">
+
+    <!-- section Jumbotron -->
     <section id="jumbotron">
       <div class="container jumbo_container">
+        <!-- left jumbotron-->
         <div class="jumbo_text">
-
           <h2>Corso di clown</h2>
           <p>
             Stai cercando una lavoro che ti porta a girare tutta l'europa e conoscere persone variegate, sei nel posto
@@ -69,18 +71,14 @@ export default {
             </button>
           </div>
         </div>
+        <!-- jumbo rigth -->
         <div class="jumbo_img">
           <img src="/images/billboard-img.png" alt="image of clown with pc">
         </div>
-
-
-
       </div>
-
-
     </section>
 
-
+    <!-- section banner_data -->
     <section id="banner_data">
       <div class="container container_data">
         <div class="banner_single">
@@ -103,9 +101,9 @@ export default {
           <span>MAGHI DEL CODICE</span>
         </div>
       </div>
-
     </section>
 
+    <!-- section who_are -->
     <section id="who_are">
       <div class="container container_who_are">
         <div class="who_are_image">
@@ -250,7 +248,7 @@ export default {
           <div class="card_professor" :class="[n == 5 ? 'card_important' : '']" v-for="n in 5" @mouseenter="mouseUp(n)"
             @mouseleave="mouseDown()">
             <div class="card_img">
-              <img src="/recognitions.png" alt="">
+              <img src="/images/teacher1.jpg" alt="">
               <div class="social_professor" v-show="this.socialProfessor && n == index">
                 <ul>
                   <li>
