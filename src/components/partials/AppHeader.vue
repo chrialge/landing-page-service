@@ -3,7 +3,17 @@ export default {
     name: 'AppHeader',
     data() {
         return {
+            dropdown: false,
+            dropdownActive: false
 
+        }
+    },
+    methods: {
+
+    },
+    mounted() {
+        if (innerWidth <= 1000) {
+            this.dropdownActive = true;
         }
     }
 }
@@ -16,7 +26,47 @@ export default {
             <div class="logo">
                 <h4>ciao</h4>
             </div>
-            <div class="link-header">
+            <div class="btn_dropdown" @click="this.dropdown = !this.dropdown" v-show="this.dropdownActive">
+                <button>
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </button>
+            </div>
+
+            <div class="dropdown" v-if="this.dropdown">
+                <button type="button" class="btn_close" @click="this.dropdown = !this.dropdown">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <div class="link-header">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                HOME
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                CORSI
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                EVENTI
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                CONTATTI
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                REGISTRATI
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="link-header" v-if="this.dropdownActive === false">
                 <ul>
                     <li>
                         <a href="#">

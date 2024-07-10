@@ -2,32 +2,66 @@
 import AppHeader from './components/partials/AppHeader.vue';
 import AppFooter from './components/partials/AppFooter.vue';
 
+import { Swiper, SwiperSlide } from 'swiper/vue';
+
+// import styles bundle
+import 'swiper/css';
+
+
+import 'swiper/css/pagination';
+import { Pagination } from 'swiper/modules';
+
 export default {
   components: {
+    Swiper,
+    SwiperSlide,
     AppHeader,
     AppFooter
+  },
+  data() {
+    return {
+
+    }
+  },
+  setup() {
+    return {
+      modules: [Pagination],
+    };
+  },
+  mounted() {
+
+
+    // init Swiper:
+
   }
 }
 </script>
-
 <template>
   <AppHeader />
 
   <main id="site_main">
     <section id="jumbotron">
       <div class="container jumbo_container">
-        <h2>Corso di clown</h2>
-        <p>
-          Stai cercando una lavoro che ti porta a girare tutta l'europa e conoscere persone variegate, sei nel posto
-          giusto!
-        </p>
-        <div class="search_container">
-          <input type="search" name="text_user" id="text_user" placeholder="search">
-          <button class="search_btn">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </button>
+        <div class="jumbo_text">
 
+          <h2>Corso di clown</h2>
+          <p>
+            Stai cercando una lavoro che ti porta a girare tutta l'europa e conoscere persone variegate, sei nel posto
+            giusto!
+          </p>
+          <div class="search_container">
+            <input type="search" name="text_user" id="text_user" placeholder="search">
+            <button class="search_btn">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
         </div>
+        <div class="jumbo_img">
+          <img src="/images/billboard-img.png" alt="image of clown with pc">
+        </div>
+
+
+
       </div>
 
 
@@ -62,7 +96,7 @@ export default {
     <section id="who_are">
       <div class="container container_who_are">
         <div class="who_are_image">
-
+          <img src="/images/about-img.jpg" alt="">
         </div>
         <div class="who_are_info">
           <span>Scopri di piu su di noi</span>
@@ -94,14 +128,21 @@ export default {
 
 
     <section id="category">
+
       <div class="container container_category">
-        <span>Scegli la categoria di corsi dalla quale vuoi iniziare</span>
-        <h2>Categorie Popolari</h2>
-        <button class="btn_primary">
-          GUARDA TUTTO
-        </button>
+        <div class="category_header">
+          <div class="category_text">
+            <span>Scegli la categoria di corsi dalla quale vuoi iniziare</span>
+            <h2>Categorie Popolari</h2>
+          </div>
+
+          <button class="btn_primary">
+            GUARDA TUTTO
+          </button>
+        </div>
+
         <div class="categories_container">
-          <div class="category_card">
+          <div class="category_card" v-for="n in 6">
             <div class="category_icon">
               <i class="fa-solid fa-hippo"></i>
             </div>
@@ -111,15 +152,7 @@ export default {
             </div>
           </div>
 
-          <div class="category_card">
-            <div class="category_icon">
-              <i class="fa-solid fa-hippo"></i>
-            </div>
-            <div class="category_info">
-              <h4>DOMATORE</h4>
-              <span>20 corsi</span>
-            </div>
-          </div>
+
         </div>
       </div>
 
@@ -130,7 +163,7 @@ export default {
         <h5 class="text_center">Alcuni dei nostri corsi online piu popolari</h5>
         <h2 class="text_center">Esplora I Corsi Online</h2>
         <div class="container_course">
-          <div class="card_course" v-for="n in 3">
+          <div class="card_course" v-for="n in 8">
             <div class="card_top">
 
             </div>
@@ -170,18 +203,28 @@ export default {
       <div class="container">
         <h5 class="text_center">Cosa dicono gli studenti</h5>
         <h2 class="text_center">Recensioni</h2>
-        <p>
-          "E stato divertente le interazioni con professionisti europei che mi ha indirizzato verso la mia strada"
-        </p>
-        <div class="user_feedback">
-          <div class="user_img">
-            <img src="/user-account.png" alt="">
-          </div>
-          <div class="user_info">
-            <h4>Lorenzo Raffaeli</h4>
-            <span>Stundetessa</span>
-          </div>
-        </div>
+        <swiper :spaceBetween="30" :pagination="{
+          clickable: true,
+        }" :modules="modules" class="mySwiper">
+          <swiper-slide v-for="n in 3">
+            <p>
+              "E stato divertente le interazioni con professionisti europei che mi ha indirizzato verso la mia
+              strada"
+            </p>
+            <div class="user_feedback">
+              <div class="user_img">
+                <img src="/user-account.png" alt="">
+              </div>
+              <div class="user_info">
+                <h4>Lorenzo Raffaeli</h4>
+                <span>Stundetessa</span>
+              </div>
+            </div>
+          </swiper-slide>
+        </swiper>
+
+
+
       </div>
 
     </section>
@@ -222,8 +265,8 @@ export default {
           <div class="icon">
             <i class="fa fa-address-book" aria-hidden="true"></i>
           </div>
-          <div class="accordion_item">
-            <div class="accordion_title">
+          <div class="accordion_item" :class="[n == 0 || n % 2 ? 'left_card' : '']">
+            <div class="accordion_phone" :class="[n == 0 || n % 2 ? 'accordion_left_title' : 'accordion_title']">
               <h3>Primo Step</h3>
             </div>
             <div class="accordion_paragraph">
@@ -246,8 +289,11 @@ export default {
 
     <section id="newsletter">
       <div class="container">
-        <h2>Iscriviti E Ottieni Il 20% Di Sconto Sul Tuo Primo Corso Online</h2>
-        <h5>Iscriviti alla nostra newsletter e non perderti mai nessuna offerta</h5>
+        <div class="text_mewsletter">
+          <h2>Iscriviti E Ottieni Il 20% Di Sconto Sul Tuo Primo Corso Online</h2>
+          <h5>Iscriviti alla nostra newsletter e non perderti mai nessuna offerta</h5>
+        </div>
+
         <form action="" method="post">
           <input type="email" name="email" id="email" placeholder="lascia la tua email*">
           <button class="text_center btn_primary" type="submit">REGISTRATI</button>

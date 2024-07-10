@@ -18,40 +18,76 @@ body {
 .container {
     width: 100%;
     padding: 0 5px;
+
+    @media (min-width: 800px) {
+        width: 90%;
+        margin: auto;
+    }
 }
 
 #jumbotron {
-    height: 500px;
+    background-image: url('/images/billboard-bg.png');
+
 
     .jumbo_container {
         padding-top: 50px;
         padding-right: 30px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
 
-        &>h2 {
-            font-size: 50px;
-            padding-bottom: 15px;
+        &>* {
+            width: 100%;
+
+            @media (min-width: 800px) {
+                width: 50%;
+            }
         }
 
-        .search_container {
-            margin-top: 30px;
-            background-color: white;
-            border-radius: 7px;
-            padding: 7px;
-            display: flex;
+        .jumbo_text {
 
-            &>input {
-                flex-grow: 1;
-                border: none;
-                background-color: white;
-                outline: none;
+            &>h2 {
+                font-size: 50px;
+                padding-bottom: 15px;
             }
 
-            .search_btn {
-                border: none;
-                padding: 8px 12px;
-                color: white;
-                background-color: green;
-                border-radius: 10px;
+            .search_container {
+                margin-top: 30px;
+                background-color: white;
+                border-radius: 7px;
+                padding: 7px;
+                display: flex;
+
+                &>input {
+                    flex-grow: 1;
+                    border: none;
+                    background-color: white;
+                    outline: none;
+                }
+
+                .search_btn {
+                    border: none;
+                    padding: 8px 12px;
+                    color: white;
+                    background-color: green;
+                    border-radius: 10px;
+                }
+            }
+
+            @media (min-width: 800px) {
+                padding: 0 100px;
+            }
+
+        }
+
+
+
+        .jumbo_img {
+            padding-top: 20px;
+
+
+            &>img {
+                width: 100%;
             }
         }
     }
@@ -62,6 +98,7 @@ body {
         display: flex;
         flex-wrap: wrap;
         row-gap: 10px;
+        justify-content: space-between;
 
         .banner_single {
             width: 100%;
@@ -73,6 +110,17 @@ body {
             background-color: white;
             border-radius: 10px;
             box-shadow: 1px 1px 10px;
+
+            @media (min-width:600px) {
+                transform: translatey(-120px);
+                width: calc(50% - 5px);
+
+            }
+
+            @media (min-width: 800px) {
+                transform: translatey(-120px);
+                width: calc(100% / 12 * 3 - 5px);
+            }
         }
     }
 }
@@ -83,13 +131,25 @@ body {
     .container_who_are {
         display: flex;
         flex-wrap: wrap;
+        align-items: center;
 
         &>* {
             width: 100%;
+
+            @media (min-width: 800px) {
+                width: 50%;
+            }
         }
 
         .who_are_image {
-            height: 400px;
+
+            &>img {
+                margin: 0 5%;
+                width: 90%;
+                clip-path: ellipse(49% 49% at 50% 50%);
+
+
+            }
         }
 
         .who_are_info {
@@ -123,18 +183,29 @@ body {
 
     .container_category {
 
-        &>h3 {
-            padding: 15px 0;
+        .category_header {
+
+            &>h2 {
+                padding: 15px 0;
+            }
+
+            &>.btn_primary {
+                margin-bottom: 20px;
+            }
+
+            @media (min-width: 800px) {
+                display: flex;
+                justify-content: space-between;
+            }
         }
 
-        &>.btn_primary {
-            margin-bottom: 20px;
-        }
+
 
         .categories_container {
             display: flex;
             row-gap: 10px;
             flex-wrap: wrap;
+            justify-content: space-between;
 
             &>* {
                 width: 100%;
@@ -143,10 +214,20 @@ body {
                 background-color: rgba(255, 0, 0, 0.545);
                 align-items: center;
                 gap: 20px;
+                border-radius: 10px;
+                border: none;
 
                 &>.category_icon {
                     color: red;
                     font-size: 30px;
+                }
+
+                @media (min-width:600px) {
+                    width: calc(50% - 5px);
+                }
+
+                @media (min-width:800px) {
+                    width: calc(100% / 12 * 4 - 5px);
                 }
             }
         }
@@ -171,6 +252,7 @@ body {
         display: flex;
         row-gap: 30px;
         flex-wrap: wrap;
+        justify-content: space-between;
 
         .card_course {
             padding: 10px;
@@ -194,6 +276,14 @@ body {
                 .title {
                     padding: 20px 0;
                 }
+            }
+
+            @media (min-width:600px) {
+                width: calc(50% - 5px);
+            }
+
+            @media (min-width:800px) {
+                width: calc(100% / 12 * 3 - 5px);
             }
         }
     }
@@ -232,28 +322,46 @@ body {
             padding: 15px 0 50px;
         }
 
-        .user_feedback {
-            display: flex;
-            padding: 20px 0;
-            align-items: center;
+        &>.swiper {
 
-            .user_img {
-                width: 50px;
+            .swiper-slide {
+                width: 100% !important;
 
-                &>img {
-                    width: 100%;
+                @media (min-width:800px) {
+                    width: calc(100% /12 *4) !important;
                 }
             }
 
-            .user_info {
-                padding-left: 50px;
-                flex-grow: 1;
+            .swiper-pagination {
+                @media (min-width: 800px) {
+                    display: none;
+                }
+            }
 
-                &>span {
-                    display: block;
+            .user_feedback {
+                display: flex;
+                padding: 20px 0;
+                align-items: center;
+
+                .user_img {
+                    width: 50px;
+
+                    &>img {
+                        width: 100%;
+                    }
+                }
+
+                .user_info {
+                    padding-left: 50px;
+                    flex-grow: 1;
+
+                    &>span {
+                        display: block;
+                    }
                 }
             }
         }
+
     }
 }
 
@@ -279,10 +387,18 @@ body {
                 &>img {
                     width: 100%;
                 }
+
+                @media (min-width:800px) {
+                    width: calc(100% / 5 - 10px);
+                }
             }
 
             .card_important {
                 width: 100%;
+
+                @media (min-width:800px) {
+                    width: calc(100% / 5 - 10px);
+                }
             }
         }
     }
@@ -306,6 +422,16 @@ body {
                 padding: 8px 0;
                 vertical-align: top;
                 padding-left: 6px;
+
+                @media (min-width:800px) {
+                    width: calc(50%);
+
+                }
+            }
+
+            @media (min-width:800px) {
+                display: flex;
+                flex-wrap: wrap;
 
             }
 
@@ -331,10 +457,16 @@ body {
                 background-color: white;
                 position: absolute;
                 border-radius: 50%;
+
+                @media (min-width:800px) {
+                    left: 48%;
+
+                }
             }
 
             .accordion_item {
                 margin: 0 30px 0 30px;
+                width: calc(100% - 50px);
 
                 .accordion_title {
                     position: relative;
@@ -343,12 +475,12 @@ body {
 
                     &:before {
                         position: absolute;
-                        right: 98%;
+                        left: -8px;
                         content: '';
                         width: 0px;
                         height: 0px;
                         border-style: solid;
-                        border-width: 10px 10px 10px 0;
+                        border-width: 10px 15px 10px 0;
                         border-color: transparent aqua transparent transparent;
                         display: inline-block;
                         vertical-align: middle;
@@ -370,16 +502,89 @@ body {
                         padding: 7px 10px;
                     }
                 }
+
+                @media (min-width:800px) {
+                    width: 50%;
+
+                }
             }
+        }
+
+        .left_card {
+
+
+            .accordion_left_title {
+                position: relative;
+                padding: 10px;
+                background-color: aqua;
+
+                &:before {
+                    position: absolute;
+                    right: -10px;
+                    content: '';
+                    width: 0px;
+                    height: 0px;
+                    border-style: solid;
+                    transform: rotate(56deg);
+                    border-width: 10px 15px 10px 0;
+                    border-color: transparent aqua transparent transparent;
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin-right: 5px;
+                }
+            }
+
+            .accordion_phone {
+                position: relative;
+                padding: 10px;
+                background-color: aqua;
+
+                @media (max-width:800px) {
+
+                    &:before {
+                        transform: rotate(0);
+                        position: absolute;
+                        left: -8px;
+                        content: '';
+                        width: 0px;
+                        height: 0px;
+                        border-style: solid;
+                        border-width: 10px 15px 10px 0;
+                        border-color: transparent aqua transparent transparent;
+                        display: inline-block;
+                        vertical-align: middle;
+                        margin-right: 5px;
+                    }
+                }
+
+            }
+
+
+            @media (min-width:800px) {
+                transform: translateX(-117%);
+
+            }
+
+            @media (min-width:1000px) {
+                transform: translateX(-113%);
+
+            }
+
+        }
+
+        @media (min-width:800px) {
+            margin-left: 50%;
+
         }
     }
 }
 
 #newsletter {
-    padding: 20px 0;
+    margin: 20px 0;
+    background-color: aqua;
 
     .container {
-        background-color: aqua;
+
         padding: 50px 0;
 
         &>h5 {
@@ -407,6 +612,14 @@ body {
 
             &>.btn_primary {
                 width: 95%;
+            }
+        }
+
+        @media (min-width:800px) {
+            display: flex;
+
+            &>* {
+                width: 50%;
             }
         }
     }
