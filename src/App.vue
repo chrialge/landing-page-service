@@ -112,8 +112,8 @@ export default {
             giusto!
           </p>
           <div class="search_container">
-            <input type="search" name="text_user" id="text_user" placeholder="search">
-            <button class="search_btn">
+            <input type="search" name="text_user" id="text_user" placeholder="search" aria-label="text">
+            <button class="search_btn" aria-label="search" aria-roledescription="search lesson, course or professor of the joker scholl">
               <i class="fa-solid fa-magnifying-glass"></i>
             </button>
           </div>
@@ -128,22 +128,22 @@ export default {
     <!-- section banner_data -->
     <section id="banner_data">
       <div class="container container_data">
-        <div class="banner_single">
+        <div class="banner_single" tabindex="0">
           <h4>100+</h4>
           <span>CORSI DA PAGLIACCIO</span>
         </div>
 
-        <div class="banner_single">
+        <div class="banner_single" tabindex="0">
           <h4>20+</h4>
           <span>MAESTRI EUROPEO</span>
         </div>
 
-        <div class="banner_single">
+        <div class="banner_single" tabindex="0">
           <h4>50+</h4>
           <span>CERTIFICAZIONI INTERNAZIONALI</span>
         </div>
 
-        <div class="banner_single">
+        <div class="banner_single" tabindex="">
           <h4>GRATIS</h4>
           <span>3 GIORNI DI PROVA</span>
         </div>
@@ -154,7 +154,7 @@ export default {
     <section id="who_are">
       <div class="container container_who_are">
         <div class="who_are_image">
-          <img src="/images/about-img.jpg" alt="">
+          <img src="/images/about-img.jpg" alt="image of clown then ready for study">
         </div>
         <div class="who_are_info">
           <h5 class="color_subtitle">Scopri di piu su di noi</h5>
@@ -200,13 +200,13 @@ export default {
         </div>
 
         <div class="categories_container">
-          <div class="category_card" v-for="(category, index) in categories" :class="category.class">
+          <div class="category_card" v-for="(category, index) in categories" :class="category.class" tabindex="0">
             <div class="category_icon">
-              <i class="fa-solid fa-hippo" v-if="index == 0 || index == 5"></i>
-              <i class="fa-solid fa-kiwi-bird" v-if="index == 1 || index == 6"></i>
-              <i class="fa-solid fa-dragon" v-if="index == 2 || index == 7"></i>
-              <i class="fa-solid fa-otter" v-if="index == 3 || index == 8"></i>
-              <i class="fa-solid fa-horse" v-if="index == 4"></i>
+              <i class="fa-solid fa-hippo" v-if="index == 0 || index == 5" role="presentation"></i>
+              <i class="fa-solid fa-kiwi-bird" v-if="index == 1 || index == 6" role="presentation"></i>
+              <i class="fa-solid fa-dragon" v-if="index == 2 || index == 7" role="presentation"></i>
+              <i class="fa-solid fa-otter" v-if="index == 3 || index == 8" role="presentation"></i>
+              <i class="fa-solid fa-horse" v-if="index == 4" role="presentation"></i>
             </div>
             <div class="category_info">
               <h4>{{ category.name }}</h4>
@@ -227,7 +227,7 @@ export default {
         <div class="container_course">
           <div class="card_course" v-for="n in 8">
             <div class="card_top">
-              <img :src="'/images/item' + n + '.jpg'" alt="">
+              <img :src="'/images/item' + n + '.jpg'" alt="image of course selected">
             </div>
             <div class="card_body">
               <div class="text_subtitle text_gray">
@@ -303,22 +303,22 @@ export default {
               <div class="social_professor" v-show="this.socialProfessor && n == index">
                 <ul>
                   <li>
-                    <a href="#">
+                    <a href="#" aria-label="facebook" aria-roledescription="redirect to page facebook of professor selected">
                       <i class="fa-brands fa-facebook"></i>
                     </a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a href="#" aria-label="twitter" aria-roledescription="redirect to page twitter of professor selected">
                       <i class="fa-brands fa-twitter"></i>
                     </a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a href="#" aria-label="instagram" aria-roledescription="redirect to page instagram of professor selected">
                       <i class="fa-brands fa-instagram"></i>
                     </a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a href="#" aria-label="likedin" aria-roledescription="redirect to page likedin of professor selected">
                       <i class="fa-brands fa-linkedin"></i>
                     </a>
                   </li>
@@ -386,7 +386,7 @@ export default {
         </div>
 
         <form action="" method="post">
-          <input type="email" name="email" id="email" placeholder="lascia la tua email*">
+          <input type="email" name="email" id="email" placeholder="lascia la tua email*" aria-label="email">
           <button class="text_center btn_primary" type="submit">REGISTRATI</button>
         </form>
       </div>
