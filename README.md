@@ -10,9 +10,13 @@ Segui le indicazioni del *designer* per riprodurre il layout del prototipo che t
 Nella stessa cartella ci sono anche le icone (SVG), il resto va estrapolato dal prototipo, così come la disposizione delle icone e le funzionalità avanzate come il menu su mobile e lo slider delle recensioni
 
 
-
 <video width="320" height="240" src="./public/image_md/video-all-sites.mp4" controls >
 </video>
+[<video width="320" height="240" src="./public/image_md/video-all-sites.mp4" controls >
+</video>]
+<iframe src="./public/image_md/video-all-sites.mp4" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+[<iframe src="./public/image_md/video-all-sites.mp4" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>]
+[![Video Title](./public/image_md/video-all-sites.mp4)]
 
 
 ## Milestone
