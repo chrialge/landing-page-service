@@ -11,8 +11,7 @@ Nella stessa cartella ci sono anche le icone (SVG), il resto va estrapolato dal 
 
 
 
-<video width="320" height="240" controls>
-  <source src="./public/image_md/video-all-sites.mp4" type="video/mp4">
+<video width="320" height="240" src="./public/image_md/video-all-sites.mp4" controls >
 </video>
 
 
