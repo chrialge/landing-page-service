@@ -316,6 +316,118 @@ h6 {
                     color: $text-lighter;
                 }
             }
+
+            .icon_red {
+                border: 2px solid red;
+                background-color: rgba(255, 0, 0, 0.545);
+
+                &>.category_icon {
+                    color: red;
+                    font-size: 30px;
+                }
+
+                &:hover {
+                    transition: all 0.5s ease-in-out;
+                    background-color: red;
+                    color: $text-lighter;
+                }
+
+
+                &:hover .category_icon {
+                    transition: all 0.5s ease-in-out;
+                    color: $text-lighter;
+                }
+            }
+
+            .icon_blue {
+                border: 2px solid blue;
+                background-color: rgba(0, 0, 255, 0.549);
+
+                &>.category_icon {
+                    color: blue;
+                    font-size: 30px;
+                }
+
+                &:hover {
+                    transition: all 0.5s ease-in-out;
+                    background-color: blue;
+                    color: $text-lighter;
+                }
+
+
+                &:hover .category_icon {
+                    transition: all 0.5s ease-in-out;
+                    color: $text-lighter;
+                }
+            }
+
+            .icon_yellow {
+                border: 2px solid rgb(199, 199, 20);
+                background-color: rgba(251, 251, 5, 0.368);
+
+                &>.category_icon {
+                    color: rgb(199, 199, 20);
+                    font-size: 30px;
+                }
+
+                &:hover {
+                    transition: all 0.5s ease-in-out;
+                    background-color: rgb(199, 199, 20);
+                    color: $text-lighter;
+                }
+
+
+                &:hover .category_icon {
+                    transition: all 0.5s ease-in-out;
+                    color: $text-lighter;
+                }
+            }
+
+
+            .icon_orange {
+                border: 2px solid orangered;
+                background-color: rgba(255, 166, 0, 0.534);
+
+                &>.category_icon {
+                    color: orangered;
+                    font-size: 30px;
+                }
+
+                &:hover {
+                    transition: all 0.5s ease-in-out;
+                    background-color: orangered;
+                    color: $text-lighter;
+                }
+
+
+                &:hover .category_icon {
+                    transition: all 0.5s ease-in-out;
+                    color: $text-lighter;
+                }
+            }
+
+            .icon_purple {
+                border: 2px solid purple;
+                background-color: rgba(128, 0, 128, 0.456);
+
+                &>.category_icon {
+                    color: purple;
+                    font-size: 30px;
+                }
+
+                &:hover {
+                    transition: all 0.5s ease-in-out;
+                    background-color: purple;
+                    color: $text-lighter;
+                }
+
+
+                &:hover .category_icon {
+                    transition: all 0.5s ease-in-out;
+
+                    color: $text-lighter;
+                }
+            }
         }
     }
 }
@@ -349,7 +461,11 @@ h6 {
             box-shadow: 1px 1px 10px gray;
 
             .card_top {
-                height: 200px;
+                width: 100%;
+
+                &>img {
+                    width: 100%;
+                }
             }
 
             .card_body {
@@ -460,13 +576,14 @@ h6 {
             gap: 10px;
 
             .card_professor {
-                padding: 10px;
+
                 width: calc((100% /12)* 3 - 8px);
                 background-color: white;
                 border-radius: 8px;
                 box-shadow: 1px 1px 10px black;
 
                 .card_img {
+                    padding: 5px 5px 0;
                     width: 100%;
                     position: relative;
 
@@ -479,8 +596,11 @@ h6 {
 
                     .social_professor {
                         position: absolute;
-                        top: 0px;
-                        left: 0px;
+                        top: 5px;
+                        left: 5px;
+                        width: 30px;
+                        max-height: 40px;
+                        height: 30%;
 
                         &>ul {
 
@@ -490,13 +610,12 @@ h6 {
                             flex-direction: column;
                             align-items: center;
                             background-color: $bg-btn;
-                            gap: 5px;
+
                             border-top-left-radius: 10px;
 
                             &>li>a {
-                                font-size: 20px;
+                                font-size: 15px;
                                 width: 100%;
-                                padding: 10px;
                                 color: $text-lighter;
 
                                 &:hover {
@@ -577,7 +696,7 @@ h6 {
     padding: 30px 0 0;
 
     .container {
-        width: 50%;
+        width: 100%;
         margin-left: 20px;
         border-left: 2px solid $text-subtitle;
 
@@ -716,6 +835,7 @@ h6 {
 
         @media (min-width:800px) {
             margin-left: 50%;
+            width: 50%;
 
         }
     }

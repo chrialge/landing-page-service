@@ -27,46 +27,49 @@ export default {
                 <img src="../../../public/images/logo.jpg" alt="" width="50px">
                 <h1 class="color_subtitle">Joker school</h1>
             </div>
-            <div class="btn_dropdown" @click="this.dropdown = !this.dropdown" v-show="this.dropdownActive">
+            <div class="btn_dropdown" style="transition: 1s ease-in-out;" @click="this.dropdown = !this.dropdown"
+                v-show="this.dropdownActive">
                 <button>
                     <i class="fa-solid fa-ellipsis-vertical"></i>
                 </button>
             </div>
-
-            <div class="dropdown" v-if="this.dropdown">
-                <button type="button" class="btn_close" @click="this.dropdown = !this.dropdown">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
-                <div class="link-header">
-                    <ul>
-                        <li>
-                            <a href="#">
-                                HOME
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                CORSI
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                EVENTI
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                CONTATTI
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                REGISTRATI
-                            </a>
-                        </li>
-                    </ul>
+            <Transition>
+                <div class="dropdown" v-if="this.dropdown">
+                    <button type="button" class="btn_close" @click="this.dropdown = !this.dropdown"
+                        style="transition: 1s ease-in-out;">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                    <div class="link-header">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    HOME
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    CORSI
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    EVENTI
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    CONTATTI
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    REGISTRATI
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
+            </Transition>
             <div class="link-header" v-if="this.dropdownActive === false">
                 <ul>
                     <li>

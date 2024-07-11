@@ -23,6 +23,53 @@ export default {
     return {
       socialProfessor: false,
       index: 0,
+      categories: [
+        {
+          'name': 'Domatore',
+          'number_course': 20,
+          'class': 'icon_red'
+        },
+        {
+          'name': 'Clown',
+          'number_course': 30,
+          'class': 'icon_blue'
+        },
+        {
+          'name': 'Funambolo',
+          'number_course': 15,
+          'class': 'icon_yellow'
+        },
+        {
+          'name': 'Giocoliere',
+          'number_course': 10,
+          'class': 'icon_orange'
+        },
+        {
+          'name': 'Contorsionista',
+          'number_course': 20,
+          'class': 'icon_purple'
+        },
+        {
+          'name': 'Equilibrista',
+          'number_course': 20,
+          'class': 'icon_red'
+        },
+        {
+          'name': 'Danzatore circense',
+          'number_course': 25,
+          'class': 'icon_blue'
+        },
+        {
+          'name': 'Controfigura',
+          'number_course': 5,
+          'class': 'icon_yellow'
+        },
+        {
+          'name': 'Cavallerizzo circense',
+          'number_course': 10,
+          'class': 'icon_orange'
+        },
+      ]
     }
   },
   setup() {
@@ -83,22 +130,22 @@ export default {
       <div class="container container_data">
         <div class="banner_single">
           <h4>100+</h4>
-          <span>MAGHI DEL CODICE</span>
+          <span>CORSI DA PAGLIACCIO</span>
         </div>
 
         <div class="banner_single">
-          <h4>100+</h4>
-          <span>MAGHI DEL CODICE</span>
+          <h4>20+</h4>
+          <span>MAESTRI EUROPEO</span>
         </div>
 
         <div class="banner_single">
-          <h4>100+</h4>
-          <span>MAGHI DEL CODICE</span>
+          <h4>50+</h4>
+          <span>CERTIFICAZIONI INTERNAZIONALI</span>
         </div>
 
         <div class="banner_single">
-          <h4>100+</h4>
-          <span>MAGHI DEL CODICE</span>
+          <h4>GRATIS</h4>
+          <span>3 GIORNI DI PROVA</span>
         </div>
       </div>
     </section>
@@ -153,13 +200,17 @@ export default {
         </div>
 
         <div class="categories_container">
-          <div class="category_card" v-for="n in 6">
+          <div class="category_card" v-for="(category, index) in categories" :class="category.class">
             <div class="category_icon">
-              <i class="fa-solid fa-hippo"></i>
+              <i class="fa-solid fa-hippo" v-if="index == 0 || index == 5"></i>
+              <i class="fa-solid fa-kiwi-bird" v-if="index == 1 || index == 6"></i>
+              <i class="fa-solid fa-dragon" v-if="index == 2 || index == 7"></i>
+              <i class="fa-solid fa-otter" v-if="index == 3 || index == 8"></i>
+              <i class="fa-solid fa-horse" v-if="index == 4"></i>
             </div>
             <div class="category_info">
-              <h4>DOMATORE</h4>
-              <span>20 corsi</span>
+              <h4>{{ category.name }}</h4>
+              <span>{{ category.number_course }} corsi</span>
             </div>
           </div>
 
@@ -176,7 +227,7 @@ export default {
         <div class="container_course">
           <div class="card_course" v-for="n in 8">
             <div class="card_top">
-
+              <img :src="'/images/item' + n + '.jpg'" alt="">
             </div>
             <div class="card_body">
               <div class="text_subtitle text_gray">

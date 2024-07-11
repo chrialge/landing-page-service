@@ -10,7 +10,8 @@
         justify-content: space-between;
 
         row-gap: 10px;
-        .logo{
+
+        .logo {
             display: flex;
             align-items: center;
         }
@@ -32,6 +33,7 @@
                 margin-right: 10px;
                 border: 0;
                 font-size: 20px;
+                transition: 0.2s linear;
 
                 &:hover {
                     color: #EC6C5B;
@@ -39,10 +41,24 @@
             }
         }
 
+        .v-enter-active,
+        .v-leave-active {
+            height: 100%;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .v-enter-from,
+        .v-leave-to {
+            height: 0;
+            opacity: 0;
+        }
+
 
         .dropdown {
-            padding: 20px;
-            position: absolute;
+            transition: all .5s ease-in-out;
+            padding: 50px 20px 0;
+            position: fixed;
             top: 0;
             right: 0;
             background-color: #EC6C5B;
@@ -54,8 +70,8 @@
             .btn_close {
                 color: black;
                 position: absolute;
-                top: 20px;
-                right: 20px;
+                top: 40px;
+                right: 10px;
                 border: 0;
                 background-color: transparent;
                 font-size: 25px;
