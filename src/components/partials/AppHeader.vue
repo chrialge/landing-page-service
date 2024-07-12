@@ -22,47 +22,48 @@ export default {
 <template>
 
     <header id="site_header">
-        <nav class="container sidebar" role="menu">
+        <nav class="container sidebar" role="navigation">
             <div class="logo">
                 <img src="../../../public/images/logo.jpg" alt="image of logo of joker school" width="50px">
                 <h1 class="color_subtitle">Joker school</h1>
             </div>
             <div class="btn_dropdown" style="transition: 1s ease-in-out;" @click="this.dropdown = !this.dropdown"
                 v-show="this.dropdownActive">
-                <button>
-                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                <button aria-roledescription="open dropdown">
+                    <i class="fa-solid fa-ellipsis-vertical" role="presentation"></i>
                 </button>
             </div>
             <Transition>
-                <div class="dropdown" v-if="this.dropdown">
+                <div class="dropdown" v-if="this.dropdown" aria-haspopup="true" :aria-expanded="this.dropdownActive">
                     <button type="button" class="btn_close" @click="this.dropdown = !this.dropdown"
-                        style="transition: 1s ease-in-out;">
+                        style="transition: 1s ease-in-out;" aria-label="close"
+                        aria-roledescription="button close dropdown">
                         <i class="fa-solid fa-xmark"></i>
                     </button>
-                    <div class="link-header">
+                    <div class="link-header" aria-label="dropdown" aria-roledescription="dropdown with list of page">
                         <ul>
                             <li>
-                                <a href="#" role="button">
+                                <a href="#" role="button" aria-roledescription="page Home">
                                     HOME
                                 </a>
                             </li>
                             <li>
-                                <a href="#" role="button">
+                                <a href="#" role="button" aria-roledescription="page Corsi">
                                     CORSI
                                 </a>
                             </li>
                             <li>
-                                <a href="#" role="button">
+                                <a href="#" role="button" aria-roledescription="page Eventi">
                                     EVENTI
                                 </a>
                             </li>
                             <li>
-                                <a href="#" role="button">
+                                <a href="#" role="button" aria-roledescription="page Contatti">
                                     CONTATTI
                                 </a>
                             </li>
                             <li>
-                                <a href="#" role="button">
+                                <a href="#" role="button" aria-roledescription="page registrati">
                                     REGISTRATI
                                 </a>
                             </li>
@@ -70,31 +71,30 @@ export default {
                     </div>
                 </div>
             </Transition>
-            <div class="link-header" v-if="this.dropdownActive === false" aria-haspopup="true"
-                :aria-expanded="this.dropdownActive">
+            <div class="link-header" v-if="this.dropdownActive === false">
                 <ul>
                     <li>
-                        <a href="#" role="button">
+                        <a href="#" role="button" aria-roledescription="page Home">
                             HOME
                         </a>
                     </li>
                     <li>
-                        <a href="#" role="button">
+                        <a href="#" role="button" aria-roledescription="page Corsi">
                             CORSI
                         </a>
                     </li>
                     <li>
-                        <a href="#" role="button">
+                        <a href="#" role="button" aria-roledescription="page Eventi">
                             EVENTI
                         </a>
                     </li>
                     <li>
-                        <a href="#" role="button">
+                        <a href="#" role="button" aria-roledescription="page Contatti">
                             CONTATTI
                         </a>
                     </li>
                     <li>
-                        <a href="#" role="button">
+                        <a href="#" role="button" aria-roledescription="page Registrati">
                             REGISTRATI
                         </a>
                     </li>

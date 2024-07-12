@@ -113,7 +113,8 @@ export default {
           </p>
           <div class="search_container">
             <input type="search" name="text_user" id="text_user" placeholder="search" aria-label="text">
-            <button class="search_btn" aria-label="search" aria-roledescription="search lesson, course or professor of the joker scholl">
+            <button class="search_btn" aria-label="search"
+              aria-roledescription="search lesson, course or professor of the joker scholl">
               <i class="fa-solid fa-magnifying-glass"></i>
             </button>
           </div>
@@ -128,22 +129,22 @@ export default {
     <!-- section banner_data -->
     <section id="banner_data">
       <div class="container container_data">
-        <div class="banner_single" tabindex="0">
+        <div class="banner_single" tabindex="0" role="banner">
           <h4>100+</h4>
           <span>CORSI DA PAGLIACCIO</span>
         </div>
 
-        <div class="banner_single" tabindex="0">
+        <div class="banner_single" tabindex="0" role="banner">
           <h4>20+</h4>
           <span>MAESTRI EUROPEO</span>
         </div>
 
-        <div class="banner_single" tabindex="0">
+        <div class="banner_single" tabindex="0" role="banner">
           <h4>50+</h4>
           <span>CERTIFICAZIONI INTERNAZIONALI</span>
         </div>
 
-        <div class="banner_single" tabindex="">
+        <div class="banner_single" tabindex="0" role="banner">
           <h4>GRATIS</h4>
           <span>3 GIORNI DI PROVA</span>
         </div>
@@ -200,7 +201,8 @@ export default {
         </div>
 
         <div class="categories_container">
-          <div class="category_card" v-for="(category, index) in categories" :class="category.class" tabindex="0">
+          <div class="category_card" v-for="(category, index) in categories" :class="category.class" tabindex="0"
+            role="button">
             <div class="category_icon">
               <i class="fa-solid fa-hippo" v-if="index == 0 || index == 5" role="presentation"></i>
               <i class="fa-solid fa-kiwi-bird" v-if="index == 1 || index == 6" role="presentation"></i>
@@ -233,7 +235,7 @@ export default {
               <div class="text_subtitle text_gray">
                 <span>PAGLIACCIO</span>
                 <span>
-                  <i class="fa-regular fa-clock"></i>
+                  <i class="fa-regular fa-clock" role="presentation"></i>
                   1H 50M
                 </span>
               </div>
@@ -247,7 +249,7 @@ export default {
             </div>
             <div class="card_foooter">
               By: Lorenzo Raffaeli
-              <i class="fa-solid fa-star" style="color: #4cc083;" v-for="n in 5"></i>
+              <i class="fa-solid fa-star" style="color: #4cc083;" v-for="n in 5" role="presentation"></i>
             </div>
           </div>
         </div>
@@ -303,22 +305,26 @@ export default {
               <div class="social_professor" v-show="this.socialProfessor && n == index">
                 <ul>
                   <li>
-                    <a href="#" aria-label="facebook" aria-roledescription="redirect to page facebook of professor selected">
+                    <a href="#" aria-label="facebook"
+                      aria-roledescription="redirect to page facebook of professor selected">
                       <i class="fa-brands fa-facebook"></i>
                     </a>
                   </li>
                   <li>
-                    <a href="#" aria-label="twitter" aria-roledescription="redirect to page twitter of professor selected">
+                    <a href="#" aria-label="twitter"
+                      aria-roledescription="redirect to page twitter of professor selected">
                       <i class="fa-brands fa-twitter"></i>
                     </a>
                   </li>
                   <li>
-                    <a href="#" aria-label="instagram" aria-roledescription="redirect to page instagram of professor selected">
+                    <a href="#" aria-label="instagram"
+                      aria-roledescription="redirect to page instagram of professor selected">
                       <i class="fa-brands fa-instagram"></i>
                     </a>
                   </li>
                   <li>
-                    <a href="#" aria-label="likedin" aria-roledescription="redirect to page likedin of professor selected">
+                    <a href="#" aria-label="likedin"
+                      aria-roledescription="redirect to page likedin of professor selected">
                       <i class="fa-brands fa-linkedin"></i>
                     </a>
                   </li>
