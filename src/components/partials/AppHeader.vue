@@ -24,12 +24,12 @@ export default {
     <header id="site_header">
         <nav class="container sidebar" role="navigation" aria-label="heading of the page">
             <div class="logo">
-                <img src="../../../public/images/logo.jpg" alt="image of logo of joker school" width="50px" role="img">
+                <img src="../../../public/images/logo.jpg" alt="logo joker school" width="50px" role="img">
                 <h1 class="color_subtitle">Joker school</h1>
             </div>
             <div class="btn_dropdown" style="transition: 1s ease-in-out;" @click="this.dropdown = !this.dropdown"
                 v-show="this.dropdownActive">
-                <button aria-roledescription="open dropdown">
+                <button aria-roledescription="open to sidebar">
                     <i class="fa-solid fa-ellipsis-vertical" role="presentation"></i>
                 </button>
             </div>
@@ -103,22 +103,23 @@ export default {
             <div class="icons-header">
                 <ul>
                     <li>
-                        <a href="#" role="button" aria-label="go to login or register, and if you logged enter your account">
+                        <a href="#" role="button"
+                            aria-label="go to login or register, and if you logged enter your account">
                             <i class="fa-regular fa-circle-user" role="presentation"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="" role="button" aria-label="go to your favourites">
+                        <a href="#" role="button" aria-label="go to your favourites lesson and course">
                             <i class="fa-regular fa-heart" role="presentation"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="" role="button" aria-label="go to your cart">
+                        <a href="#" role="button" aria-label="go to your cart">
                             <i class="fa-solid fa-bag-shopping" role="presentation"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="" role="button" aria-label="search course, professor or categgory">
+                        <a href="#" role="button" aria-label="search course, professor or categgory">
                             <i class="fa-solid fa-magnifying-glass" role="presentation"></i>
                         </a>
                     </li>

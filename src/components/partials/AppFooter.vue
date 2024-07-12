@@ -16,33 +16,38 @@ export default {
             <div class="container">
                 <div class="social">
                     <div class="logo">
-                        <img src="../../../public/images/logo.jpg" alt="logo of Joker school" width="50px" role="img">
+                        <img src="../../../public/images/logo.jpg" alt="logo Joker school" width="50px" role="img">
                         <h3 class="color_subtitle">Joker school</h3>
                     </div>
                     <div class="widget_social">
                         <ul>
                             <li>
-                                <a href="#" role="button" aria-label="go to page facebook">
+                                <a href="#" role="button" 
+                                aria-label="go to page facebook">
                                     <i class="fa-brands fa-facebook" role="presentation"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="#" role="button" aria-label="go to page twitter">
+                                <a href="#" role="button" 
+                                aria-label="go to page twitter">
                                     <i class="fa-brands fa-twitter" role="presentation"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="#" role="button" aria-label="go to page instagram">
+                                <a href="#" role="button" 
+                                aria-label="go to page instagram">
                                     <i class="fa-brands fa-instagram" role="presentation"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="#" role="button" aria-label="go to page likedin">
+                                <a href="#" role="button" 
+                                aria-label="go to page likedin">
                                     <i class="fa-brands fa-linkedin" role="presentation"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="#" role="button" aria-label="go to page youtube">
+                                <a href="#" role="button" 
+                                aria-label="go to page youtube">
                                     <i class="fa-brands fa-youtube" role="presentation"></i>
                                 </a>
                             </li>

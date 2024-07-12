@@ -121,7 +121,7 @@ export default {
         </div>
         <!-- jumbo rigth -->
         <div class="jumbo_img">
-          <img src="/images/billboard-img.png" alt="image of clown with pc" role="img">
+          <img src="/images/billboard-img.png" alt="clown with pc" role="img">
         </div>
       </div>
     </section>
@@ -155,7 +155,7 @@ export default {
     <section id="who_are">
       <div class="container container_who_are">
         <div class="who_are_image">
-          <img src="/images/about-img.jpg" alt="image of clown then ready for study" role="img">
+          <img src="/images/about-img.jpg" alt="clown then ready for study" role="img">
         </div>
         <div class="who_are_info">
           <h5 class="color_subtitle">Scopri di piu su di noi</h5>
@@ -229,7 +229,7 @@ export default {
         <div class="container_course">
           <div class="card_course" v-for="n in 8">
             <div class="card_top">
-              <img :src="'/images/item' + n + '.jpg'" alt="image of course selected" role="img">
+              <img :src="'/images/item' + n + '.jpg'" alt="course selected" role="img">
             </div>
             <div class="card_body">
               <div class="text_subtitle text_gray">
@@ -278,7 +278,7 @@ export default {
             </p>
             <div class="user_feedback">
               <div class="user_img">
-                <img src="/user-account.png" alt="image of the person leave review">
+                <img src="/user-account.png" alt="photo the person leave review">
               </div>
               <div class="user_info">
                 <h4>Lorenzo Raffaeli</h4>
@@ -302,26 +302,30 @@ export default {
           <div class="card_professor" :class="[n == 5 ? 'card_important' : '']" v-for="n in 5" @mouseenter="mouseUp(n)"
             @mouseleave="mouseDown()">
             <div class="card_img">
-              <img src="/images/teacher1.jpg" alt="image of the professor francesco battista" role="img">
+              <img src="/images/teacher1.jpg" alt="the professor francesco battista" role="img">
               <div class="social_professor" v-show="this.socialProfessor && n == index">
                 <ul>
                   <li>
-                    <a href="#" aria-label="go to page facebook of the professor selected">
-                      <i class="fa-brands fa-facebook"></i>
+                    <a href="#" 
+                    aria-label="go to profile fb of the professor">
+                      <i role="presentation" class="fa-brands fa-facebook"></i>
                     </a>
                   </li>
                   <li>
-                    <a href="#" aria-label="go to page twitter of the professor selected">
+                    <a href="#" 
+                    aria-label="go to page of twitter">
                       <i class="fa-brands fa-twitter"></i>
                     </a>
                   </li>
                   <li>
-                    <a href="#" aria-label="go to page instagram of the professor selected">
+                    <a href="#" 
+                    aria-label="go to page instagram of the professor selected">
                       <i class="fa-brands fa-instagram"></i>
                     </a>
                   </li>
                   <li>
-                    <a href="#" aria-label="go to page likedin of the professor selected">
+                    <a href="#" 
+                    aria-label="go to page likedin of the professor selected">
                       <i class="fa-brands fa-linkedin"></i>
                     </a>
                   </li>
