@@ -112,9 +112,9 @@ export default {
             giusto!
           </p>
           <div class="search_container">
-            <input type="search" name="text_user" id="text_user" placeholder="search" aria-label="text">
-            <button class="search_btn" aria-label="search"
-              aria-roledescription="search lesson, course or professor of the joker scholl">
+            <input type="search" name="text_user" id="text_user" placeholder="search" aria-label="text"
+              aria-required="false">
+            <button class="search_btn" aria-roledescription="search lesson, course or professor of the joker scholl">
               <i class="fa-solid fa-magnifying-glass"></i>
             </button>
           </div>
@@ -249,7 +249,8 @@ export default {
             </div>
             <div class="card_foooter">
               By: Lorenzo Raffaeli
-              <i class="fa-solid fa-star" style="color: #4cc083;" v-for="n in 5" role="presentation"></i>
+              <i class="fa-solid fa-star" style="color: #4cc083;" v-for="n in 5" role="presentation"
+                :aria-label="n + '/5'"></i>
             </div>
           </div>
         </div>
@@ -305,26 +306,22 @@ export default {
               <div class="social_professor" v-show="this.socialProfessor && n == index">
                 <ul>
                   <li>
-                    <a href="#" aria-label="facebook"
-                      aria-roledescription="redirect to page facebook of professor selected">
+                    <a href="#" aria-label="go to page facebook of the professor selected">
                       <i class="fa-brands fa-facebook"></i>
                     </a>
                   </li>
                   <li>
-                    <a href="#" aria-label="twitter"
-                      aria-roledescription="redirect to page twitter of professor selected">
+                    <a href="#" aria-label="go to page twitter of the professor selected">
                       <i class="fa-brands fa-twitter"></i>
                     </a>
                   </li>
                   <li>
-                    <a href="#" aria-label="instagram"
-                      aria-roledescription="redirect to page instagram of professor selected">
+                    <a href="#" aria-label="go to page instagram of the professor selected">
                       <i class="fa-brands fa-instagram"></i>
                     </a>
                   </li>
                   <li>
-                    <a href="#" aria-label="likedin"
-                      aria-roledescription="redirect to page likedin of professor selected">
+                    <a href="#" aria-label="go to page likedin of the professor selected">
                       <i class="fa-brands fa-linkedin"></i>
                     </a>
                   </li>
@@ -392,7 +389,8 @@ export default {
         </div>
 
         <form action="" method="post" aria-invalid="false">
-          <input type="email" name="email" id="email" placeholder="lascia la tua email*" aria-label="email" aria-required="true">
+          <input type="email" name="email" id="email" placeholder="lascia la tua email*" aria-label="email"
+            aria-required="true">
           <button class="text_center btn_primary" type="submit">REGISTRATI</button>
         </form>
       </div>

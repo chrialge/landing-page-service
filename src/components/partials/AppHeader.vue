@@ -22,7 +22,7 @@ export default {
 <template>
 
     <header id="site_header">
-        <nav class="container sidebar" role="navigation">
+        <nav class="container sidebar" role="navigation" aria-label="heading of the page">
             <div class="logo">
                 <img src="../../../public/images/logo.jpg" alt="image of logo of joker school" width="50px" role="img">
                 <h1 class="color_subtitle">Joker school</h1>
@@ -43,27 +43,27 @@ export default {
                     <div class="link-header" aria-label="dropdown" aria-roledescription="dropdown with list of page">
                         <ul>
                             <li>
-                                <a href="#" role="button" aria-roledescription="page Home">
+                                <a href="#" role="button" aria-label="go to page Home">
                                     HOME
                                 </a>
                             </li>
                             <li>
-                                <a href="#" role="button" aria-roledescription="page Corsi">
+                                <a href="#" role="button" aria-label="go to page Corsi">
                                     CORSI
                                 </a>
                             </li>
                             <li>
-                                <a href="#" role="button" aria-roledescription="page Eventi">
+                                <a href="#" role="button" aria-label="go to page Eventi">
                                     EVENTI
                                 </a>
                             </li>
                             <li>
-                                <a href="#" role="button" aria-roledescription="page Contatti">
+                                <a href="#" role="button" aria-label="go to page Contatti">
                                     CONTATTI
                                 </a>
                             </li>
                             <li>
-                                <a href="#" role="button" aria-roledescription="page registrati">
+                                <a href="#" role="button" aria-label="go to page registrati">
                                     REGISTRATI
                                 </a>
                             </li>
@@ -74,27 +74,27 @@ export default {
             <div class="link-header" v-if="this.dropdownActive === false">
                 <ul>
                     <li>
-                        <a href="#" role="button" aria-roledescription="page Home">
+                        <a href="#" role="button" aria-label="go to page Home">
                             HOME
                         </a>
                     </li>
                     <li>
-                        <a href="#" role="button" aria-roledescription="page Corsi">
+                        <a href="#" role="button" aria-label="go to page Corsi">
                             CORSI
                         </a>
                     </li>
                     <li>
-                        <a href="#" role="button" aria-roledescription="page Eventi">
+                        <a href="#" role="button" aria-label="go to page Eventi">
                             EVENTI
                         </a>
                     </li>
                     <li>
-                        <a href="#" role="button" aria-roledescription="page Contatti">
+                        <a href="#" role="button" aria-label="go to page Contatti">
                             CONTATTI
                         </a>
                     </li>
                     <li>
-                        <a href="#" role="button" aria-roledescription="page Registrati">
+                        <a href="#" role="button" aria-label="go to page Registrati">
                             REGISTRATI
                         </a>
                     </li>
@@ -103,22 +103,22 @@ export default {
             <div class="icons-header">
                 <ul>
                     <li>
-                        <a href="#" role="button" aria-label="login">
+                        <a href="#" role="button" aria-label="go to login or register, and if you logged enter your account">
                             <i class="fa-regular fa-circle-user" role="presentation"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="" role="button" aria-label="favourite">
+                        <a href="" role="button" aria-label="go to your favourites">
                             <i class="fa-regular fa-heart" role="presentation"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="" role="button" aria-label="cart">
+                        <a href="" role="button" aria-label="go to your cart">
                             <i class="fa-solid fa-bag-shopping" role="presentation"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="" role="button" aria-label="search">
+                        <a href="" role="button" aria-label="search course, professor or categgory">
                             <i class="fa-solid fa-magnifying-glass" role="presentation"></i>
                         </a>
                     </li>

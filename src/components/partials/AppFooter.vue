@@ -12,7 +12,7 @@ export default {
 <template>
 
     <footer id="site_footer">
-        <nav class="footer_top" role="navigation">
+        <nav class="footer_top" role="navigation" aria-label="bottom page">
             <div class="container">
                 <div class="social">
                     <div class="logo">
@@ -22,27 +22,27 @@ export default {
                     <div class="widget_social">
                         <ul>
                             <li>
-                                <a href="#" role="button">
+                                <a href="#" role="button" aria-label="go to page facebook">
                                     <i class="fa-brands fa-facebook" role="presentation"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="#" role="button">
+                                <a href="#" role="button" aria-label="go to page twitter">
                                     <i class="fa-brands fa-twitter" role="presentation"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="#" role="button">
+                                <a href="#" role="button" aria-label="go to page instagram">
                                     <i class="fa-brands fa-instagram" role="presentation"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="#" role="button">
+                                <a href="#" role="button" aria-label="go to page likedin">
                                     <i class="fa-brands fa-linkedin" role="presentation"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="#" role="button">
+                                <a href="#" role="button" aria-label="go to page youtube">
                                     <i class="fa-brands fa-youtube" role="presentation"></i>
                                 </a>
                             </li>
@@ -53,22 +53,22 @@ export default {
                     <h4>Collegamenti</h4>
                     <ul>
                         <li>
-                            <a href="#" role="button" aria-roledescription="page Home">
+                            <a href="#" role="button" aria-label="go to page Home">
                                 Home
                             </a>
                         </li>
                         <li>
-                            <a href="#" role="button" aria-roledescription="page Chi siamo">
+                            <a href="#" role="button" aria-label="go to page Chi siamo">
                                 Chi siamo
                             </a>
                         </li>
                         <li>
-                            <a href="#" role="button" aria-roledescription="page Corsi">
+                            <a href="#" role="button" aria-label=" go to page Corsi">
                                 Corsi
                             </a>
                         </li>
                         <li>
-                            <a href="#" role="button" aria-roledescription="page Contatti">
+                            <a href="#" role="button" aria-label="go to page Contatti">
                                 Contatti
                             </a>
                         </li>
@@ -78,17 +78,17 @@ export default {
                     <h4>Collegamenti</h4>
                     <ul>
                         <li>
-                            <a href="#" role="button" aria-roledescription="page for ask">
+                            <a href="#" role="button" aria-label="go to page for ask">
                                 Come funziona
                             </a>
                         </li>
                         <li>
-                            <a href="#" role="button" aria-roledescription="page for prices">
+                            <a href="#" role="button" aria-label="go to page for prices">
                                 Prezzi
                             </a>
                         </li>
                         <li>
-                            <a href="#" role="button" aria-roledescription="page discount">
+                            <a href="#" role="button" aria-label="go to page discount">
                                 Promozioni
                             </a>
                         </li>
@@ -98,22 +98,22 @@ export default {
                     <h4>Collegamenti</h4>
                     <ul>
                         <li>
-                            <a href="#" role="button" aria-roledescription="page to pay">
+                            <a href="#" role="button" aria-label="go to page to pay">
                                 Pagamenti
                             </a>
                         </li>
                         <li>
-                            <a href="#" role="button" aria-roledescription="page for often question">
+                            <a href="#" role="button" aria-label="go to page for often question">
                                 FAQs
                             </a>
                         </li>
                         <li>
-                            <a href="#" role="button" aria-roledescription="page checkout">
+                            <a href="#" role="button" aria-label="go to page checkout">
                                 Checkout
                             </a>
                         </li>
                         <li>
-                            <a href="#" role="button" aria-roledescription="page other">
+                            <a href="#" role="button" aria-label="go to page other">
                                 Other
                             </a>
                         </li>
