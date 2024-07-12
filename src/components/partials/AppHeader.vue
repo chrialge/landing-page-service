@@ -24,7 +24,7 @@ export default {
     <header id="site_header">
         <nav class="container sidebar" role="navigation">
             <div class="logo">
-                <img src="../../../public/images/logo.jpg" alt="image of logo of joker school" width="50px">
+                <img src="../../../public/images/logo.jpg" alt="image of logo of joker school" width="50px" role="img">
                 <h1 class="color_subtitle">Joker school</h1>
             </div>
             <div class="btn_dropdown" style="transition: 1s ease-in-out;" @click="this.dropdown = !this.dropdown"

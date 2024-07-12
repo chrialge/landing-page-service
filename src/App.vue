@@ -121,7 +121,7 @@ export default {
         </div>
         <!-- jumbo rigth -->
         <div class="jumbo_img">
-          <img src="/images/billboard-img.png" alt="image of clown with pc">
+          <img src="/images/billboard-img.png" alt="image of clown with pc" role="img">
         </div>
       </div>
     </section>
@@ -155,7 +155,7 @@ export default {
     <section id="who_are">
       <div class="container container_who_are">
         <div class="who_are_image">
-          <img src="/images/about-img.jpg" alt="image of clown then ready for study">
+          <img src="/images/about-img.jpg" alt="image of clown then ready for study" role="img">
         </div>
         <div class="who_are_info">
           <h5 class="color_subtitle">Scopri di piu su di noi</h5>
@@ -229,7 +229,7 @@ export default {
         <div class="container_course">
           <div class="card_course" v-for="n in 8">
             <div class="card_top">
-              <img :src="'/images/item' + n + '.jpg'" alt="image of course selected">
+              <img :src="'/images/item' + n + '.jpg'" alt="image of course selected" role="img">
             </div>
             <div class="card_body">
               <div class="text_subtitle text_gray">
@@ -277,7 +277,7 @@ export default {
             </p>
             <div class="user_feedback">
               <div class="user_img">
-                <img src="/user-account.png" alt="">
+                <img src="/user-account.png" alt="image of the person leave review">
               </div>
               <div class="user_info">
                 <h4>Lorenzo Raffaeli</h4>
@@ -301,7 +301,7 @@ export default {
           <div class="card_professor" :class="[n == 5 ? 'card_important' : '']" v-for="n in 5" @mouseenter="mouseUp(n)"
             @mouseleave="mouseDown()">
             <div class="card_img">
-              <img src="/images/teacher1.jpg" alt="">
+              <img src="/images/teacher1.jpg" alt="image of the professor francesco battista" role="img">
               <div class="social_professor" v-show="this.socialProfessor && n == index">
                 <ul>
                   <li>
@@ -391,8 +391,8 @@ export default {
           <h5 class="color_subtitle">Iscriviti alla nostra newsletter e non perderti mai nessuna offerta</h5>
         </div>
 
-        <form action="" method="post">
-          <input type="email" name="email" id="email" placeholder="lascia la tua email*" aria-label="email">
+        <form action="" method="post" aria-invalid="false">
+          <input type="email" name="email" id="email" placeholder="lascia la tua email*" aria-label="email" aria-required="true">
           <button class="text_center btn_primary" type="submit">REGISTRATI</button>
         </form>
       </div>
